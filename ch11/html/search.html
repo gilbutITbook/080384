@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <!-- 구글 폰트 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- 아이콘 폰트 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="weather-city">
+      <!-- 검색 영역 -->
+      <section class="weather__search">
+        <input
+          type="text"
+          class="weather__searchBar"
+          placeholder="도시를 검색해주세요"
+        />
+      </section>
+      <!-- 검색 데이터가 있으면 -->
+      <section class="weather__city">
+        <div class="weather__cityLeft">
+          <strong class="weather__cityTmp">25°</strong>
+          <p class="weather__cityTmpMore">H: 27° / L: 19°</p>
+          <p>Montral, Canada</p>
+        </div>
+        <div class="weather__cityRight">
+          <img
+            src="assets/images/icons/cloudy.png"
+            alt=""
+            class="weather__cityImg"
+          />
+        </div>
+        <span class="material-symbols-outlined weather__cancel"> cancel </span>
+      </section>
+      <!-- 검색 데이터가 없으면 -->
+      <section class="no-data" style="display: none">
+        <p>검색한 지역이 없습니다.</p>
+      </section>
+    </main>
+    <!-- 공통 하단 영역 -->
+    <footer class="footer">
+      <ul class="footer__list">
+        <li class="footer__item">
+          <a href="/">
+            <span class="material-symbols-outlined footer_icons"> home </span>
+          </a>
+        </li>
+        <li>
+          <a href="forecast.html">
+            <span class="material-symbols-outlined footer_icons">
+              stacked_line_chart
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="/search.html">
+            <span class="material-symbols-outlined footer_icons"> search </span>
+          </a>
+        </li>
+      </ul>
+    </footer>
+    <script>
+      const init = () => {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+      };
+      init();
+      window.addEventListener('resize', init);
+    </script>
+  </body>
+</html>

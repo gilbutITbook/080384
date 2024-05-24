@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <!-- 구글 폰트 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- 아이콘 폰트 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <!-- 지역 -->
+      <h1 class="header__title">
+        <span class="material-symbols-outlined"> location_on </span>서울
+      </h1>
+      <h2 class="header__date">11:00</h2>
+    </header>
+    <!-- 현재 날씨 -->
+    <main class="main">
+      <article class="weather">
+        <section class="weather__info">
+          <img
+            src="assets/images/icons/cloudy.png"
+            alt=""
+            class="weather__img"
+          />
+          <h3 class="weather_temp">28°</h3>
+          <p class="weather_summary">대체로 맑음</p>
+          <ul class="weather__moreList">
+            <li class="weather__moreListItem">
+              <p class="weather__subtitle">습도</p>
+              <p class="weather__desc">82%</p>
+            </li>
+            <li class="weather__moreListItem">
+              <p class="weather__subtitle">풍속</p>
+              <p class="weather__desc">4.12/ms</p>
+            </li>
+            <li class="weather__moreListItem">
+              <p class="weather__subtitle">체감</p>
+              <p class="weather__desc">7도</p>
+            </li>
+          </ul>
+        </section>
+      </article>
+    </main>
+    <!-- 공통 하단 영역 -->
+    <footer class="footer">
+      <ul class="footer__list">
+        <li class="footer__item">
+          <a href="/">
+            <span class="material-symbols-outlined footer_icons"> home </span>
+          </a>
+        </li>
+        <li>
+          <a href="forecast.html">
+            <span class="material-symbols-outlined footer_icons">
+              stacked_line_chart
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="/search.html">
+            <span class="material-symbols-outlined footer_icons"> search </span>
+          </a>
+        </li>
+      </ul>
+    </footer>
+    <script>
+      const init = () => {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty("--vh", `${vh}px`);
+      };
+      init();
+      window.addEventListener("resize", init);
+    </script>
+  </body>
+</html>

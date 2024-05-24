@@ -1,0 +1,310 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+:root {
+  --app-header: 3.4375rem;
+  --app-footer: 4.28125rem;
+  --app-title: 1.5rem;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #1d2837;
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 1rem;
+  height: var(--app-header);
+}
+
+.header__title {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.header__title span {
+  vertical-align: -5px;
+}
+
+.header__city {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.header__date {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+/**=======================
+홈 화면 
+=========================*/
+
+.main {
+  height: calc(var(--vh, 1vh) * 100 - var(--app-header) - var(--app-footer));
+  overflow: scroll;
+}
+
+.weather {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 2rem 2rem;
+  color: white;
+  text-align: center;
+}
+
+.weather-city,
+.forecast {
+  padding: 2rem 2rem;
+  color: white;
+}
+
+.weather__img {
+  width: 10rem;
+}
+
+.weather_temp {
+  font-size: 4rem;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.weather_summary {
+  font-size: 1.125rem;
+  color: #eaeaea;
+  margin-bottom: 3rem;
+}
+
+.weather__moreList {
+  display: flex;
+  justify-content: space-around;
+}
+
+.weather__moreListItem {
+  flex: 0 0 33.33%;
+}
+
+.weather__subtitle {
+  font-size: 1.25rem;
+  color: #9bc3ff;
+  margin-bottom: 0.625rem;
+}
+
+.weather__desc {
+  font-size: 1.125rem;
+}
+
+.weather__week {
+  padding: 1rem 0;
+}
+
+.weather__week__tab {
+  display: flex;
+  justify-content: space-around;
+  text-align: left;
+  margin-bottom: 1.5rem;
+  font-size: 1.15rem;
+  font-weight: normal;
+}
+
+.week__list {
+  display: flex;
+  align-items: center;
+  overflow: scroll;
+  margin-left: -2rem;
+  padding: 1rem 0;
+  min-height: 132px;
+}
+
+.week__list__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 25%;
+  font-size: 1.125rem;
+}
+
+.week_icons {
+  width: 3rem;
+}
+
+/**
+ Footer
+ **/
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  height: var(--app-footer);
+}
+
+.footer__list {
+  display: flex;
+  justify-content: space-around;
+  color: white;
+}
+
+.footer_icons {
+  font-size: 2rem;
+}
+
+/**=======================
+검색 화면
+=========================*/
+
+.weather__search {
+  margin-bottom: 1.5rem;
+}
+
+.weather__searchBar {
+  width: 100%;
+  background-color: #233a5a;
+  border: 1px solid #233a5a;
+  padding: 1rem;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+}
+
+.weather-city,
+.forecast {
+  height: calc(var(--vh, 1vh) * 100 - var(--app-footer));
+  overflow: scroll;
+}
+
+.weather__city {
+  display: flex;
+  align-items: center;
+  background-color: #233a5a;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.5rem;
+  position: relative;
+}
+
+.weather__cancel {
+  position: absolute;
+  top: -7px;
+  right: -7px;
+}
+
+.weather__city:last-child {
+  margin-bottom: 0;
+}
+
+.weather__cityLeft {
+  flex: 0 0 70%;
+  text-align: left;
+}
+
+.weather__cityRight {
+  flex: 0 0 30%;
+  text-align: right;
+}
+
+.weather__cityImg {
+  max-width: 100%;
+}
+
+.weather__cityTmp {
+  font-size: 2rem;
+}
+
+.weather__cityTmpMore {
+  font-size: 0.875rem;
+  color: #bababa;
+}
+
+/**=======================
+예보 화면
+=========================*/
+.forecast {
+  margin-bottom: 2rem;
+}
+
+.forecast__title {
+  font-size: var(--app-title);
+  display: block;
+}
+
+.forecast__weekListItem {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid #bababa;
+  padding: 0.625rem 0;
+}
+
+.forecast__day {
+  display: block;
+  margin-bottom: 0.3125rem;
+}
+
+.forecast__tmp {
+  font-size: 2.5rem;
+}
+
+.forecast__date {
+  color: #bababa;
+}
+
+.forecast__weekListImg {
+  width: 100%;
+}
+
+.forecast__itemLeft {
+  flex: 0 0 40%;
+}
+
+.forecast__itemMiddle {
+  flex: 0 0 40%;
+}
+
+.forecast__itemRight {
+  flex: 0 0 20%;
+}
+
+.no-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  color: #bababa;
+  height: 100%;
+}
+
+@media (max-width: 420px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 361px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 337px) {
+  html {
+    font-size: 11px;
+  }
+}

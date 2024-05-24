@@ -1,0 +1,42 @@
+<form id="loginForm">
+  <label for="uid">아이디: <input type="text" id="uid" /></label>
+  <label for="upw">비밀번호: <input type="password" id="upw" /></label>
+  <button type="submit">로그인</button>
+</form>
+
+<script>
+  document
+    .getElementById('loginForm')
+    .addEventListener('submit', function (event) {
+      event.preventDefault(); // 폼 전송 이벤트 취소
+
+      // 요소에 입력된 값 가져오기
+      const uid = document.getElementById('uid').value;
+      const upw = document.getElementById('upw').value;
+      // AJAX 요청 만들기
+      const xhr = new XMLHttpRequest();
+      xhr.open('POST', '/login_process.php', true);
+
+      // AJAX 응답 설정하기
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+          if (xhr.status === 200) {
+            // 요청이 성공할 경우
+            const response = xhr.responseText;
+            console.log(response);
+          } else {
+            // 요청이 실패할 경우
+            console.error('Request failed with status ' + xhr.status);
+          }
+        }
+      };
+
+      // 데이터 전송 준비하기
+      const formData = new FormData();
+      formData.append('uid', uid);
+      formData.append('upw', upw);
+
+      // AJAX로 데이터 전송 요청하기
+      xhr.send(formData);
+    });
+</script>
