@@ -2,7 +2,7 @@
 
 이 저장소에는 <코딩 자율학습 Vue.js 프런트엔드 개발 입문>의 예제 코드가 담겨 있습니다.
 
-![cv img_코자 제로초__입체_그림자](https://github.com/gilbutITbook/080409/assets/6995518/40a79044-910d-441b-b5f2-e8480cabddde)
+![코자_Vuejs_입체_그림자](https://github.com/gilbutITbook/080384/assets/6995518/5c6557f5-1491-4364-b116-52adb59331a6)
 
 ## 예제 코드 다운로드 및 확인 방법
 
