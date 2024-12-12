@@ -34,5 +34,9 @@ export const useCartStore = defineStore('cart', () => {
     }
   };
 
-  return { item, cartItem, outCart };
+  const allClear = () => {
+    cartItem.splice(0, cartItem.length);
+  };
+
+  return { item, cartItem, outCart, allClear };
 });

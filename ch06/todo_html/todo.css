@@ -10,7 +10,6 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #f3f0ff;
   background-color: white;
 }
 
@@ -140,6 +139,5 @@ body {
   font-size: 13px;
   color: white;
   padding: 5px;
-  border: none;
   cursor: pointer;
 }

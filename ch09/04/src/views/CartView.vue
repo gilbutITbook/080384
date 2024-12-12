@@ -8,7 +8,7 @@ const cartItem = computed(() => {
 });
 // cartIem 스테이트 값 비우기
 const allClear = () => {
-  cartStore.cartItem = [];
+  cartStore.allClear();
 };
 // 장바구니에 담긴 전체 금액을 합산해 alert()으로 보여 주기
 const payCart = () => {

@@ -15,8 +15,8 @@ export const useCountSetupStore = defineStore('countSetup', () => {
     increment(); // 다른 액션(함수) 호출
     fetch(url)
       .then((response) => response.json())
-      .then((json) => {
-        json.value = json;
+      .then((jsonData) => {
+        json.value = jsonData;
       });
   };
 

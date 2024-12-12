@@ -9,7 +9,7 @@ const router = createRouter({
       name: 'home',
       component: HomeView,
       // alias: '/home',
-      alias: ['home', 'root'],
+      alias: ['/home', '/root'],
     },
     {
       path: '/user/:id',

@@ -3,7 +3,7 @@ import { RouterLink, RouterView } from 'vue-router';
 import { useRouter } from 'vue-router';
 const router = useRouter();
 const navigateToHome = () => {
-  router.push(6);
+  router.push('/');
 };
 const replaceWithAbout = () => {
   router.replace('/about');
